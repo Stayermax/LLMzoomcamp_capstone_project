@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+api_keys/*
+data/scrapped_data/*
+data/all_possible_fields.json
+data/api_response_example.json
+data/wines.csv
+
+.DS_Store
