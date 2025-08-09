@@ -107,6 +107,8 @@ def extract_wine_row(el: dict, wine_type: str) -> dict:
     vintage_name= _get(el, "vintage.name")
     wine_name   = _get(el, "vintage.wine.name")
     description = _get(el, "vintage.wine.style.description")
+    varietal_name =  _get(el, "vintage.wine.style.varietal_name")
+    style_name =  _get(el, "vintage.wine.style.name")
 
     # grapes
     used_grapes = "; ".join([grape['name'] for grape in _get(el, "vintage.wine.region.country.most_used_grapes", default=[])])
@@ -155,6 +157,8 @@ def extract_wine_row(el: dict, wine_type: str) -> dict:
         "top_flavors": top_flavors,
         "vintage_name": vintage_name,
         "wine_name": wine_name,
+        "varietal_name": varietal_name,
+        "style_name": style_name,
         "year": year,
         "price": price,                 # one number
         "currency_code": currency_code, # so price is meaningful
@@ -168,6 +172,7 @@ def extract_wine_row(el: dict, wine_type: str) -> dict:
         "vivino_url": vivino_url,
         "description": description,
     }
+
 
 def process_one_file(file_name: str, vintage_ids: set):
     rows = []
