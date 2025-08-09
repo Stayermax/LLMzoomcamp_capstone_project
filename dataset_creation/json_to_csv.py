@@ -106,7 +106,7 @@ def extract_wine_row(el: dict, wine_type: str) -> dict:
     country_name = _get(el, "vintage.wine.region.country.name")
     vintage_name= _get(el, "vintage.name")
     wine_name   = _get(el, "vintage.wine.name")
-    description = _get(el, "vintage.wine.style.description")
+    style_description = _get(el, "vintage.wine.style.description")
     varietal_name =  _get(el, "vintage.wine.style.varietal_name")
     style_name =  _get(el, "vintage.wine.style.name")
 
@@ -170,7 +170,7 @@ def extract_wine_row(el: dict, wine_type: str) -> dict:
         "rating_avg": rating_avg,
         "rating_count": rating_count,
         "vivino_url": vivino_url,
-        "description": description,
+        "style_description": style_description,
     }
 
 
@@ -196,8 +196,8 @@ def process_all_files():
 
     df = pd.DataFrame(rows)
     df.to_csv("data/wines.csv", index=False, encoding="utf-8")
-    df.head(20).to_csv("data/wines_head.csv", index=False, encoding="utf-8")
+    df.sample(20).to_csv("data/wines_head.csv", index=False, encoding="utf-8")
 
 if __name__ == "__main__":
-    count_styles()
+    # count_styles()
     process_all_files() 
