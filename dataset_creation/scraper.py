@@ -5,7 +5,7 @@ import os
 # Initialize the ApifyClient with your API token
 
 actor_id = open("api_keys/actor_id", "r").read()
-apify_key = open("api_keys/apify_key", "r").read()
+apify_key = open("../api_keys/apify_key", "r").read()
 client = ApifyClient(apify_key)
 
 STYLES = [["Red"],["White"],["Rose"],["Sparkling"],["Dessert"],["Fortified"]]
