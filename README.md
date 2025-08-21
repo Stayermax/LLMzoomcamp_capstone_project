@@ -1,9 +1,13 @@
 # LLMzoomcamp_capstone_project
 Capstone project for LLM zoomcamp
 
-## Project parts:
+## Wine Recommendation System with RAG
 
 ### Problem description
+
+This project builds a personalized wine recommendation system using a custom dataset from Vivino.com. By combining Retrieval-Augmented Generation (RAG) with user input, the system delivers context-aware wine suggestions that align with individual tastes. We will implement and evaluate this system.
+
+### Retrieval flow
 
 
 ## EDA + Model training
