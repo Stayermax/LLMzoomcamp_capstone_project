@@ -60,6 +60,7 @@ def get_most_common_relevant_food(df: pd.DataFrame) -> dict:
 
     return varietal_relevant_food
 
+
 def varietal_name_normalisation(varietal_name: str) -> str:
     return strip_accents(varietal_name).lower().strip()
 
